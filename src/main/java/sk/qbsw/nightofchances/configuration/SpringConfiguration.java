@@ -19,6 +19,8 @@ import java.io.Serializable;
 @Configuration
 public class SpringConfiguration implements Serializable
 {
+	private static final long serialVersionUID = 7941739727234284146L;
+
 	@Bean
 	@Primary
 	public ObjectMapper objectMapper (Jackson2ObjectMapperBuilder builder)
