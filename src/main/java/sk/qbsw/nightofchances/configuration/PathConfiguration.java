@@ -11,6 +11,8 @@ import java.io.Serializable;
  */
 public class PathConfiguration implements Serializable
 {
+	private static final long serialVersionUID = 1L;
+
 	public static final String REGISTRATIONS_ROOT_PATH = "/registrations";
 
 	public static final String NOTIFICATIONS_ROOT_PATH = "/notifications";

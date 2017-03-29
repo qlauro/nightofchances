@@ -5,9 +5,7 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 import javax.validation.constraints.NotNull;
 import java.time.OffsetDateTime;
-import java.util.HashSet;
 import java.util.Locale;
-import java.util.Set;
 
 /**
  * The registration.
@@ -56,16 +54,6 @@ public class Registration extends Entity
 	public static Builder newBuilder ()
 	{
 		return new Builder();
-	}
-
-	public Long getId ()
-	{
-		return id;
-	}
-
-	public void setId (Long id)
-	{
-		this.id = id;
 	}
 
 	public OffsetDateTime getCreated ()
@@ -172,7 +160,6 @@ public class Registration extends Entity
 		private Locale locale;
 		private RegistrationState state = RegistrationState.VALID;
 		private Application application;
-		private Set<Notification> notifications = new HashSet<>();
 
 		private Builder ()
 		{
@@ -223,12 +210,6 @@ public class Registration extends Entity
 		public Builder application (Application val)
 		{
 			application = val;
-			return this;
-		}
-
-		public Builder notifications (Set<Notification> val)
-		{
-			notifications = val;
 			return this;
 		}
 
